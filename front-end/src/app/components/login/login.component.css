@@ -17,7 +17,7 @@
   /* Control the right side */
   .right {
     right: 0;
-    background-color:#EFCB9C
+    background-color:#E1D2BC
     ;
   }
   
@@ -45,27 +45,35 @@ form {
   input[type=text], input[type=password] {
       background-color: #455A64;
     width: 100%;
+    color: whitesmoke;
     padding: 8px 25px;
+    border-radius: 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #E1D2BC;
   }
+  ::placeholder {
+    color: whitesmoke;
+    opacity: 1; /* Firefox */
+  }
+  
   
   /* Set a style for all buttons */
   button {
-    background-color: #bcd7e1;
-    color: black;
+    background-color: green;
+    color: whitesmoke;
   
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 35%;
+   
     box-shadow: none;
     padding: 8px 25px;
     border: none;
     border-radius: 20px;
   }
-  
+
   /* Add a hover effect for buttons */
   button:hover {
     opacity: 0.8;
@@ -74,7 +82,7 @@ form {
   /* Extra style for the cancel button (red) */
   .cancelbtn {
     width: auto;
-    padding: 10px 18px;
+    padding: 5px 1px;
     background-color: #E1D2BC;
   }
 
@@ -102,4 +110,21 @@ form {
     .cancelbtn {
       width: 100%;
     }
+  }
+  .imgcontainer{
+      color:#455A64;
+      font-size: 500;
+      font-family: sans-serif;
+
+      line-height: 1.7;
+  }
+  label{
+      color: #455A64;
+      
+  }
+  .imgcontainer h4{
+    font-size: 40px;
+    font-family: sans-serif;
+
+   
   }
