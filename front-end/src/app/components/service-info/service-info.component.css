@@ -1,0 +1,32 @@
+.container
+{
+  margin-top: 2.8cm;
+}
+#errands {
+   
+    background-color: #E1D2BC;
+  }
+
+  section {
+    padding-top: 100%;
+    padding-bottom: 100%;
+}
+.card{
+    background-color: #111;
+    color: white;
+    box-shadow: 0 0 15px 0 wheat;
+    border-radius: 8px;
+    border-color: wheat;
+    border: solid;
+}
+.picture{
+  
+    object-fit: cover;
+}
+.container h1{
+    color: whitesmoke;
+    font-family: "Barlow", sans-serif;
+    font-size:60px;
+    margin-bottom: 10px;
+    padding-top: 2px;
+}
