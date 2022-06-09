@@ -8,11 +8,11 @@
   }
 
   section {
-    padding-top: 100%;
+    padding-top: 50px;
     padding-bottom: 100%;
 }
 .card{
-    background-color: #111;
+    background-color: #90693180;
     color: white;
     box-shadow: 0 0 15px 0 wheat;
     border-radius: 8px;

@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
+import { PostingComponent } from './components/posting/posting.component';
 
 
 @NgModule({
@@ -17,12 +19,15 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
     RegisterComponent,
     LoginComponent,
   
-    ServiceInfoComponent
+    ServiceInfoComponent,
+       PostingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
