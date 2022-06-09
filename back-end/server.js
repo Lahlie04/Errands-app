@@ -1,0 +1,29 @@
+const express = require("express");
+const userRouter = require('./routes/routes');
+const bodyParser = require("body-parser") 
+const cors = require('cors');
+
+const app = express();
+const port = 4304;
+
+var corsOption ={
+    origin: 'http://localhost:54701',
+}
+
+app.use(cors(corsOption));
+
+app.use(express.json());
+
+app.use(express.urlencoded({extended:true}));
+
+app.use(express.json());
+
+app.get('/',(req,res)=>{
+    res.send("We-run is working")
+});
+
+app.use("/api/",userRouter);
+
+app.listen(port,() => {
+    console.log(`server is listening to port ${port}`);
+});
