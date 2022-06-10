@@ -8,26 +8,43 @@
   <div class="split right">
     <div class="centered">
  
-        <form>
+        <form  [formGroup]="form">
             <div class="imgcontainer">
               <h4><b>REGISTER WITH US!</b></h4>
             </div>
+
           
             <div class="container">
-                <label for="psw">Full Name</label>
-                <input type="password" placeholder="Enter Full Name" name="psw" required>
 
+              <label>Role</label>
+        <select class="form-select" formControlName="role" aria-label="Default select example">
+
+
+          <option selected>Select your role</option>
+
+          <option value="Client">Client</option>
+          <option value="Service provider">Service provider</option>
+
+        </select>
+                <label for="psw">Name</label>
+                <input type="text" placeholder="Enter Full Name" formControlName="name"name="psw" required>
+                <label for="psw">Surname</label>
+                
+                <input type="text" placeholder="Enter Full Name" formControlName="surname"name="psw" required>
+              <label for="uname">Mobile Number</label>
+
+              <input type="number" placeholder="Enter Number" formControlName="cell_no"name="psw" required>
               <label for="uname">Email</label>
 
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username"formControlName="email" name="uname" required>
           
               <label for="psw">Password</label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password"  formControlName="password"name="psw" required>
 
               <label for="psw"> Confirm Password</label>
-              <input type="password" placeholder="Confirm Password" name="psw" required>
+              <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" name="psw" required>
           <div>
-              <button type="submit routerLink='/services">Register</button>
+              <button type="submit routerLink='/services"  (click)="register()">Register</button>
             </div>
              
             </div>

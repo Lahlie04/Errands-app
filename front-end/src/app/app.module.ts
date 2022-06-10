@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { PostingComponent } from './components/posting/posting.component';
 import { HistoryComponent } from './components/history/history.component';
+import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
 
 
 @NgModule({
@@ -19,10 +20,10 @@ import { HistoryComponent } from './components/history/history.component';
     LandingPageComponent,
     RegisterComponent,
     LoginComponent,
-  
     ServiceInfoComponent,
        PostingComponent,
-       HistoryComponent
+       HistoryComponent,
+       RunnerhomeComponent
   ],
   imports: [
     BrowserModule,
