@@ -11,10 +11,11 @@ import { RequestsService } from 'src/app/services/requests.service';
 export class HistoryComponent implements OnInit {
  
 
-  items:any;
-  reqs:any;
+  items=[];
+  reqs=[];
   
   client_id : any;
+   today=[];
   
 
 
@@ -32,7 +33,7 @@ export class HistoryComponent implements OnInit {
       this.getHistory();
     }
 
-    getId(item: { runner_id: string; }){
+    getId(item:any){
       
       console.log('Runner ID :' + item.runner_id);
       localStorage.setItem("runner_id", item.runner_id);

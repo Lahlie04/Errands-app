@@ -12,6 +12,7 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
 import { PostingComponent } from './components/posting/posting.component';
 import { HistoryComponent } from './components/history/history.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
+import { RequestsComponent } from './components/requests/requests.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RunnerhomeComponent } from './components/runnerhome/runnerhome.componen
     ServiceInfoComponent,
        PostingComponent,
        HistoryComponent,
-       RunnerhomeComponent
+       RunnerhomeComponent,
+       RequestsComponent
   ],
   imports: [
     BrowserModule,

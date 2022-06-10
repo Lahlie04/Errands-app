@@ -7,6 +7,7 @@ import { PostingComponent } from './components/posting/posting.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
+import { RequestsComponent } from './components/requests/requests.component';
 
 const routes: Routes = [
   {path: '', component:LandingPageComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'services', component:ServiceInfoComponent},
   {path: 'posting', component:PostingComponent},
   {path: 'history', component:HistoryComponent},
-  {path: 'home', component:RunnerhomeComponent}
+  {path: 'home', component:RunnerhomeComponent},
+  {path: 'request', component:RequestsComponent},
 ];
 
 @NgModule({
