@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HistoryComponent } from './components/history/history.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { PostingComponent } from './components/posting/posting.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path: 'services', component:ServiceInfoComponent},
   {path: 'posting', component:PostingComponent},
+  {path: 'history', component:HistoryComponent},
 ];
 
 @NgModule({

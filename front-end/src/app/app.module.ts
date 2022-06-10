@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { PostingComponent } from './components/posting/posting.component';
+import { HistoryComponent } from './components/history/history.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PostingComponent } from './components/posting/posting.component';
     LoginComponent,
   
     ServiceInfoComponent,
-       PostingComponent
+       PostingComponent,
+       HistoryComponent
   ],
   imports: [
     BrowserModule,
