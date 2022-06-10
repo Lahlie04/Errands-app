@@ -188,19 +188,17 @@
   </div>
 
 </div> -->
-<section class="intro">
+<!-- <section class="intro">
   <div class="row">
-    <div class="col-lg-6 col-sm-12 left">
-      <div class="">
+    <div class="col-lg-6 col-sm-12 left"> 
         <div class="centered">
           <img src="../../../assets/images/Online Groceries-pana.png" >
-          
         </div>
-      </div>
     </div>
+
     <div class="col-lg-6 col-sm-12 right">
       
-      <div class="">
+    
         <div class="centered">
      
             <form action="action_page.php" method="post">
@@ -233,8 +231,57 @@
                
               </form>
         </div>
-      </div> 
+      
 
     </div>
   </div>
-</section>
+</section> -->
+<body>
+  <section class="intro">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 left">
+       
+
+        <div class="col-lg-6 col-sm-12 left"> 
+          <div class="centered">
+            <img src="../../../assets/images/Online Groceries-pana.png" >
+          </div>
+      </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 right">
+        <div class="centered">
+        <form   [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="imgcontainer">
+            <h4><b>Welcome Back!</b></h4>
+          </div>
+        
+          <div class="container">
+
+            <label for="uname">Username</label>
+
+            <input type="text" placeholder="Enter Username"  formControlName="email" name="uname" required>
+        
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password"   formControlName="password" name="psw" required>
+  
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            
+        <div>
+            <button type="submit">Login</button>
+          </div>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            
+          </div>
+        <div>
+          <span class="psw">Not a member? <a href="#">SignUp</a></span>
+        </div>
+         
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</body>
