@@ -8,7 +8,7 @@
   <div class="split right">
     <div class="centered">
  
-        <form action="action_page.php" method="post">
+        <form [formGroup]="registerForm" >
             <div class="imgcontainer">
               <h4><b>Welcome Back!</b></h4>
             </div>
@@ -17,12 +17,12 @@
 
               <label for="uname">Username</label>
 
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username"  formControlName="email" name="uname" required>
           
               <label for="psw">Password</label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password"  formControlName="password"name="psw" required>
           <div>
-              <button type="submit">Login</button>
+              <button type="submit" class="button" (click)="signIn()">Login</button>
             </div>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me

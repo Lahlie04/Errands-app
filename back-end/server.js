@@ -6,11 +6,14 @@ const cors = require('cors');
 const app = express();
 const port = 4304;
 
-var corsOption ={
-    origin: 'http://localhost:54701',
-}
+var corsOptions = {
+    origin: '*',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
-app.use(cors(corsOption));
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
