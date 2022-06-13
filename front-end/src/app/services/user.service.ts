@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 
+import { Update, User,login, edit } from '../interface/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
- 
+  
   private baseUrl = 'http://localhost:4304/api/clients/';
 
   constructor(private http:HttpClient) { }
@@ -57,4 +58,5 @@ export class UserService {
 
 }
 
-}
+
+

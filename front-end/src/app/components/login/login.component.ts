@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
             
             if(data[0].role=='Client' && data[0].is_active===true){
               localStorage.setItem("clientID",data[0].id);
-              this.router.navigateByUrl('/errands',{replaceUrl:true});
+              this.router.navigateByUrl('/services',{replaceUrl:true});
               localStorage.setItem("Role", data[0].role)
             }
             if(data[0].role=='Service provider' && data[0].is_active===true){

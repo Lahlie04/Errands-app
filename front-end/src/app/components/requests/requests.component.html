@@ -1,0 +1,41 @@
+
+<section id="requests">
+
+
+<h1 style="text-align: center;">Requests</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 mt-5">
+       
+
+        <div class="card mt-3" *ngFor="let request of requests">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h5
+                  class="card-title justify-content-end"
+                  style="text-align: center"
+                >
+                  {{ request.client_name }}
+                  <hr />
+                </h5>
+              </div>
+            </div>
+            <h3>{{ request.errand }}</h3>
+
+            <h6>Address</h6>
+            <p class="text card-text">{{ request.address }}</p>
+            <h6>Instructions</h6>
+            <p class="card-text">"{{ request.comment }}"</p>
+            <a class="btn" (click)="myFunction(request)"
+              >Accept</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+

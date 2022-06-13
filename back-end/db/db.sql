@@ -85,6 +85,7 @@ insert into service(name, description, cost, image)
 values('Lawn Mowing', 'Get someone to mow the lawn for you', 99.99, 'https://i.ibb.co/myQkmvp/lawn-mowing.jpg'),
 ('Shopping', 'Get someone to do shopping for you', 150,'https://i.ibb.co/RjK8Jvw/shoping.jpg'),
 ('Certify Documents', 'Send someone to certify documents for you, give him/her your copies and originals', 75 ,'https://i.ibb.co/H7db2Ds/certify-doc.jpg'),
-('Queuing' , 'Send someone to stand in a queue for you and you will find him/her there standing on your behalf', 90, 'https://i.ibb.co/rc3WrCC/queue.jpg');
+('Queuing' , 'Send someone to stand in a queue for you and you will find him/her there standing on your behalf', 90, 'https://i.ibb.co/rc3WrCC/queue.jpg')
+-- ('baby sitting','Request someone to come and look after your child or children' 300,'https://i.ibb.co/0MNW4rF/babysitting.jpg' );
 
 --

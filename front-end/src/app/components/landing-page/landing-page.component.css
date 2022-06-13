@@ -104,7 +104,7 @@ body{
  #about h1{
     /* margin-top: 400px; */
    
-    color: whitesmoke;
+    color: #455A64;
     font-family: "Barlow", sans-serif;
     font-size:60px;
     transform: translateY(50px);
@@ -126,7 +126,7 @@ body{
 #about{
     background-color: #E1D2BC;
     color: #fff;
-    min-height: 53rem;
+    min-height: 5rem;
 }
 #about img{
 height: 300px;
