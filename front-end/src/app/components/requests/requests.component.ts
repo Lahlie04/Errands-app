@@ -65,7 +65,8 @@ acceptRequest(){
         'Request has been accepted.',
         'success'
       )
-      this.router.navigateByUrl('/jobs', {replaceUrl:true});
+      this.router.navigateByUrl('/Jobs', {replaceUrl:true});
+      console.log(this.reqData);
       this.service.accept(this.reqData).subscribe((res=>{
         this.accept = res ;
         console.log(res);
@@ -86,11 +87,10 @@ acceptRequest(){
 
 
 myFunction(request:any){
-  // console.log('hello');
-  console.log(request);
-  this.reqData.id=request;
-  this.reqData.runner_id=localStorage.getItem("runnerID");
+  // console.log(request);
+  this.reqData.id=request["id"];
   console.log(this.reqData);
+  this.reqData.runner_id=localStorage.getItem("runnerID");
 
   this.acceptRequest();
   
