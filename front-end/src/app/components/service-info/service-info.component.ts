@@ -44,8 +44,6 @@ this.serviceId=localStorage.getItem("serviceID");
 
 items: Service[] = [
 
-
-
 ];
 
 myFunction(item: any){

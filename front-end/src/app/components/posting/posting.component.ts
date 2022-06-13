@@ -86,7 +86,8 @@ comData:any ={
     })
   }
 
-  async getAddress(){
+  // async getAddress(){
+  getAddress(){
 
     this.addressData ={
       request_id:localStorage.getItem("request_id"),
@@ -103,7 +104,10 @@ comData:any ={
       console.log(res)
       console.log(this.comData);
 
-      this.addComment();
+      // this.addComment();
+      this.service.addComment(this.comData).subscribe((res:any)=>{
+        console.log('comment added');
+      })
       
     })
   }

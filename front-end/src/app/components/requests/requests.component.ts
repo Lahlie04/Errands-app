@@ -86,7 +86,7 @@ acceptRequest(){
 
 
 myFunction(request:any){
-  console.log('hello');
+  // console.log('hello');
   console.log(request);
   this.reqData.id=request;
   this.reqData.runner_id=localStorage.getItem("runnerID");
