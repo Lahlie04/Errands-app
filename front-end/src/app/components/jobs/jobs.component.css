@@ -31,9 +31,10 @@ h1{
 
 .btn2{
     
-    background-color:    rgb(212, 112, 66);
+    background-color:    green;
     align-items: flex-end;
     text-align: center;
+    color: #ffffff;
 }
 
 .card{
