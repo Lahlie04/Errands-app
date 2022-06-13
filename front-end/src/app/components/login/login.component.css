@@ -1,4 +1,4 @@
-/* .split {
+.split {
   height: 100%;
   width: 50%;
   position: fixed;
@@ -9,34 +9,17 @@
 }
 
 /* Control the left side */
-/* .left {
+.left {
   left: 0;
   background-color: #111;
-} */
-/* .left{
-  display : flex;
-  justify-content : center;
-  align-items : center;
-  background-color:#000;
-  height : 100vh;
-  
-
-} */
-/* .right{
-  display : flex;
-  justify-content : center;
-  align-items : center;
-  background-color:#E1D2BC;
-  height : 100vh;
-  
-} */
+}
 
 /* Control the right side */
-/* .right {
+.right {
   right: 0;
   background-color:#E1D2BC
   ;
-} */
+}
 
 /* If you want the content centered horizontally and vertically */
 .centered {
@@ -65,71 +48,37 @@ input[type=text], input[type=password] {
   color: whitesmoke;
   padding: 8px 25px;
   border-radius: 20px;
-  margin: 8px 0;
+  margin: 10px 0;
   display: inline-block;
   border: 1px solid #E1D2BC;
+  text-align: center;
 }
 ::placeholder {
   color: whitesmoke;
   opacity: 1; /* Firefox */
 }
 
- 
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password] {
-      background-color: #455A64;
-    width: 100%;
-    color: whitesmoke;
-    padding: 8px 25px;
-    border-radius: 20px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #E1D2BC;
-    text-align: center;
-  }
-  ::placeholder {
-    color: whitesmoke;
-    opacity: 1; /* Firefox */
-  }
-  
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: green;
-    color: whitesmoke;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
- 
-    box-shadow: none;
-    padding: 8px 25px;
-    border: none;
-    border-radius: 20px;
-  }
-  .forgot{
-    text-align: left;
-    padding: 8px 25px;
-  }
-  .rg{
-    margin: 8px 0;
-  }
 
 /* Set a style for all buttons */
 button {
   background-color: green;
   color: whitesmoke;
-
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width:fit-content;
- 
+  width: fit-content;
+
   box-shadow: none;
   padding: 8px 25px;
   border: none;
   border-radius: 20px;
+}
+.forgot{
+  text-align: left;
+  padding: 8px 25px;
+}
+.rg{
+  margin: 8px 0;
 }
 
 /* Add a hover effect for buttons */
@@ -147,7 +96,7 @@ button:hover {
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  /* padding: 16px; */
 
 }
 
@@ -155,99 +104,34 @@ button:hover {
 span.psw {
  
   padding-top: 16px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 300px) {
   span.psw {
     display: block;
     float: none;
     
   }
-  
   .cancelbtn {
     width: 100%;
   }
 }
+.imgcontainer{
+    color:#455A64;
+    font-size: 500;
+    font-family: sans-serif;
 
-/* 
-  
-  /* Add padding to containers */
- 
-@media (max-width: 1200px) { 
-  
-  .intro .left, .intro .right{
-    height: 100vh;
-    width: 50%;
-  }
-  /* The "Forgot password" text */
-  span.psw {
-   
-    padding-top: 16px;
-    text-align: left;
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-      
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-  }
+    line-height: 1.7;
 }
 label{
     color: #455A64;
     
 }
-
-
-
-.intro{
-  display: flex;
-  height:100%
-} 
-
-.left{
-  display : flex;
-  justify-content : center;
-  align-items : center;
-  background-color:#000;
-  height : 100vh;
-  color : #000;
-
-}
-.right{
-  display : flex;
-  justify-content : center;
-  align-items : center;
-  background-color:#E1D2BC;
-  height : 100vh;
-  color : #3d231b;
-}
-@media (max-width: 1200px) { 
-  .left{
-    height:100vh
-  }
-  .right{
-    height:100vh
-  }
-}
-
 .imgcontainer h4{
-  font-size: 30px;
+  font-size: 40px;
   font-family: sans-serif;
 
  
 }
-.imgcontainer{
-  color:#455A64;
-  font-size: 500;
-  font-family: sans-serif;
-
-  line-height: 1.7;
-} 
