@@ -1,7 +1,8 @@
 body{
     background-color:   #455A64;
     height: 2000px;
-  
+    margin-top: 2.4rem;
+    
 }
 
 .column {
@@ -17,6 +18,7 @@ body{
     background: #fff;
     margin-right: 30px;
     margin-left: 30px;
+    margin-top: 40rem
   }
 
 .col-sm-6{
@@ -25,6 +27,7 @@ body{
 
 .container{
     margin-top: 5rem;
+    background-color:   #455A64;
 }
 
 @media screen and (max-width: 600px) {

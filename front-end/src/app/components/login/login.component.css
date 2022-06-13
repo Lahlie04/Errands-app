@@ -1,137 +1,134 @@
 .split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  /* Control the left side */
-  .left {
-    left: 0;
-    background-color: #111;
-  }
-  
-  /* Control the right side */
-  .right {
-    right: 0;
-    background-color:#E1D2BC
-    ;
-  }
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* Style the image inside the centered container, if needed */
-  .centered img {
-   
-   height: 500px;
-   width: 500px;
-  }
-  /* Bordered form */
-form {
-   border: none;
-  }
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password] {
-      background-color: #455A64;
-    width: 100%;
-    color: whitesmoke;
-    padding: 8px 25px;
-    border-radius: 20px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #E1D2BC;
-    text-align: center;
-  }
-  ::placeholder {
-    color: whitesmoke;
-    opacity: 1; /* Firefox */
-  }
-  
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: green;
-    color: whitesmoke;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:#E1D2BC
+  ;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
  
-    box-shadow: none;
-    padding: 8px 25px;
-    border: none;
-    border-radius: 20px;
-  }
-  .forgot{
-    text-align: left;
-    padding: 8px 25px;
-  }
-  .rg{
-    margin: 8px 0;
-  }
+ height: 500px;
+ width: 500px;
+}
+/* Bordered form */
+form {
+ border: none;
+}
 
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 5px 1px;
-    background-color: #E1D2BC;
-  }
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    background-color: #455A64;
+  width: 100%;
+  color: whitesmoke;
+  padding: 8px 25px;
+  border-radius: 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #E1D2BC;
+  text-align: center;
+}
+::placeholder {
+  color: whitesmoke;
+  opacity: 1; /* Firefox */
+}
 
-  
-  /* Add padding to containers */
-  .container {
-    /* padding: 16px; */
 
-  }
-  
-  /* The "Forgot password" text */
+/* Set a style for all buttons */
+button {
+  background-color: green;
+  color: whitesmoke;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+
+  box-shadow: none;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 20px;
+}
+.forgot{
+  text-align: left;
+  padding: 8px 25px;
+}
+.rg{
+  margin: 8px 0;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 5px 1px;
+  background-color: #E1D2BC;
+}
+
+
+/* Add padding to containers */
+
+
+/* The "Forgot password" text */
+span.psw {
+ 
+  padding-top: 16px;
+  text-align: left;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
   span.psw {
-   
-    padding-top: 16px;
-    text-align: left;
+    display: block;
+    float: none;
+    
   }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-      
-    }
-    .cancelbtn {
-      width: 100%;
-    }
+  .cancelbtn {
+    width: 100%;
   }
-  .imgcontainer{
-      color:#455A64;
-      font-size: 500;
-      font-family: sans-serif;
-
-      line-height: 1.7;
-  }
-  label{
-      color: #455A64;
-      
-  }
-  .imgcontainer h4{
-    font-size: 40px;
+}
+.imgcontainer{
+    color:#455A64;
+    font-size: 500;
     font-family: sans-serif;
 
-   
-  }
+    line-height: 1.7;
+}
+label{
+    color: #455A64;
+    
+}
+.imgcontainer h4{
+  font-size: 40px;
+  font-family: sans-serif;
+
+ 
+}
