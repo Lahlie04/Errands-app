@@ -1,0 +1,55 @@
+.card-header{
+    background-color: white;
+}
+
+.col-sm-3{
+    color: white;
+    background-color: #223c50;
+    text-align: center;
+}
+
+
+h1{
+    text-align: center;
+    font-family: Lora;
+}
+
+.btn{
+    background-color: #223c50;
+    border-radius: 15px;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.btn2{
+    
+    background-color:    rgb(212, 112, 66);
+    align-items: flex-end;
+    text-align: center;
+}
+
+.card{
+    display:flex;
+}
+
+
+.button{
+    margin-inline-end: 4rem;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(211, 0, 0, 0.2);
+    background:#ffffff
+  }
+
+h4{font-family: 'Montserrat';
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+  ;}
+
+  h5{
+      font-weight:normal;
+  }
+  h6{
+      font-display:inherit;
+  }

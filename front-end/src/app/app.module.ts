@@ -12,8 +12,14 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
 import { PostingComponent } from './components/posting/posting.component';
 import { HistoryComponent } from './components/history/history.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
+
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { EarningsComponent } from './components/earnings/earnings.component';
+
 import { RequestsComponent } from './components/requests/requests.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
+
 
 
 @NgModule({
@@ -23,6 +29,10 @@ import { RatingsComponent } from './components/ratings/ratings.component';
     RegisterComponent,
     LoginComponent,
     ServiceInfoComponent,
+       RunnerhomeComponent,
+       NavbarComponent,
+       JobsComponent,
+       EarningsComponent
        PostingComponent,
        HistoryComponent,
        RunnerhomeComponent,
