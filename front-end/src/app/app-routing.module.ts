@@ -9,6 +9,9 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { EarningsComponent } from './components/earnings/earnings.component';
 
 const routes: Routes = [
   {path: '', component:LandingPageComponent},
@@ -20,6 +23,10 @@ const routes: Routes = [
   {path: 'home', component:RunnerhomeComponent},
   {path: 'request', component:RequestsComponent},
   {path: 'ratings', component:RatingsComponent},
+  {path: 'nav', component:NavbarComponent},
+  {path: 'Jobs', component:JobsComponent},
+  {path: 'Earn', component:EarningsComponent}
+  
 ];
 
 @NgModule({

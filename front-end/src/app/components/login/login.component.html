@@ -15,24 +15,24 @@
           
             <div class="container">
 
-              <label for="uname">Username</label>
+              <!-- <label for="uname">Email</label> -->
 
               <input type="text" placeholder="Enter Username"  formControlName="email" name="uname" required>
           
-              <label for="psw">Password</label>
+              <!-- <label for="psw">Password</label> -->
               <input type="password" placeholder="Enter Password"  formControlName="password"name="psw" required>
+            <div class="forgot">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
           <div>
               <button type="submit" class="button" (click)="signIn()">Login</button>
             </div>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
             </div>
-          
             <div class="container" >
     
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <span class="rg">Not a member yet?<a href="#">Register</a></span>
             </div>
+            
           </form>
     </div>
   </div>

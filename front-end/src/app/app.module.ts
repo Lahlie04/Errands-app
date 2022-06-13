@@ -14,6 +14,9 @@ import { HistoryComponent } from './components/history/history.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { EarningsComponent } from './components/earnings/earnings.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { RatingsComponent } from './components/ratings/ratings.component';
        HistoryComponent,
        RunnerhomeComponent,
        RequestsComponent,
-       RatingsComponent
+       RatingsComponent,
+       NavbarComponent,
+       JobsComponent,
+       EarningsComponent
   ],
   imports: [
     BrowserModule,
