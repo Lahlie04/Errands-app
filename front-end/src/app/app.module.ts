@@ -34,6 +34,7 @@ import { EarningsComponent } from './components/earnings/earnings.component';
        NavbarComponent,
        JobsComponent,
        EarningsComponent
+     
   ],
   imports: [
     BrowserModule,
