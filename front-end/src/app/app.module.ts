@@ -13,6 +13,7 @@ import { PostingComponent } from './components/posting/posting.component';
 import { HistoryComponent } from './components/history/history.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
 import { RequestsComponent } from './components/requests/requests.component';
+import { RatingsComponent } from './components/ratings/ratings.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RequestsComponent } from './components/requests/requests.component';
        PostingComponent,
        HistoryComponent,
        RunnerhomeComponent,
-       RequestsComponent
+       RequestsComponent,
+       RatingsComponent
   ],
   imports: [
     BrowserModule,

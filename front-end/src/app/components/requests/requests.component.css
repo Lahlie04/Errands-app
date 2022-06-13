@@ -1,9 +1,26 @@
-.col-sm-3{
-    color: white;
-    background-color: #223c50;
-    text-align: center;
-}
+/* .container{
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    padding-top: 50px;
+    border: solid;
+    background-color: #455A64;
+    border-radius: 15px;
+  } */
 
+  section {
+    padding-top: 50px;
+    padding-bottom: 100%;
+    background-color: #455A64;
+}
+  section h1{
+    color: white;
+    font-family: "Barlow", sans-serif;
+    font-size:80px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
 
 h1{
     text-align: center;
@@ -18,15 +35,18 @@ h1{
     text-align: center;
     width: 12rem;
     margin-left: 4.4rem;
+    background-color: green;
+    color: white;
 }
 
-.card{
+/* .card{
     display:flex;
-}
+} */
 
 .card{
-    box-shadow: 0 4px 8px 0 rgba(211, 0, 0, 0.2);
-    background:#ffffff
+    /* box-shadow: 0 4px 8px 0 rgba(211, 0, 0, 0.2); */
+    background:#ffffff;
+    justify-content: center;
   }
 
 h4{font-family: 'Montserrat';
@@ -47,7 +67,7 @@ h4{font-family: 'Montserrat';
 }
 
 h6{font-weight: 200rem;
-    background-color: orange;
+    background-color: #E1D2BC;
     border-radius: 15px;
 text-align: center;}
 h3{font-weight:20rem;
