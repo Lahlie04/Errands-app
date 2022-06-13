@@ -10,6 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { RunnerhomeComponent } from './components/runnerhome/runnerhome.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { EarningsComponent } from './components/earnings/earnings.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { RunnerhomeComponent } from './components/runnerhome/runnerhome.componen
     LoginComponent,
   
     ServiceInfoComponent,
-       RunnerhomeComponent
+       RunnerhomeComponent,
+       NavbarComponent,
+       JobsComponent,
+       EarningsComponent
   ],
   imports: [
     BrowserModule,
