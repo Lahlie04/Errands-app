@@ -35,9 +35,11 @@ export class LoginComponent implements OnInit {
             this.isloading=false;
             // localStorage.setItem("access", JSON.stringify(data));
             localStorage.setItem("access", JSON.stringify(data[0]));
-            console.log(data)
+            console.log('something here; ', data)
+
+            // if()
             this.user=data[0].name + ' ' + data[0].surname;
-            console.log(this.user + "is a user");
+            console.log(this.user + " is a user");
             localStorage.setItem("user", this.user);
             
             if(data[0].role=='Client' && data[0].is_active===true){
@@ -45,8 +47,8 @@ export class LoginComponent implements OnInit {
               this.router.navigateByUrl('/services',{replaceUrl:true});
               localStorage.setItem("Role", data[0].role)
             }
-            if(data[0].role=='Service provider' && data[0].is_active===true){
-              this.router.navigateByUrl('/run_home',{replaceUrl:true});
+            if(data[0].role=='Service provider' && data[0].is_active===false){
+              this.router.navigateByUrl('/home',{replaceUrl:true});
               localStorage.setItem("runnerID",data[0].id);
             }
             if(data[0].role=='Admin' && data[0].is_active===true){
