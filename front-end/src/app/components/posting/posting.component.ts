@@ -50,9 +50,6 @@ comData:any ={
     
   }
 
-
-  
-
   alertWithSuccess(){
     Swal.fire('Thank you...', 'Your post is succesfully sent😉!', 'success')
   }
@@ -64,7 +61,7 @@ comData:any ={
     this.reqdata = {
     client_id: this.clientId,
     service_id : this.serviceId,
-    //comment : this.form.value.comment
+    // comment : this.form.value.comment
     
     }
 
@@ -86,7 +83,7 @@ comData:any ={
     })
   }
 
-  async getAddress(){
+   getAddress(){
 
     this.addressData ={
       request_id:localStorage.getItem("request_id"),
@@ -97,7 +94,7 @@ comData:any ={
       comment:this.form.value.comment
     }
   
-    this.comData.comment=this.form.value.comment;
+    // this.comData.comment=this.form.value.comment;
     this.comData.id=localStorage.getItem("request_id");
     this.service.getAddress(this.addressData).subscribe((res:any)=>{
       console.log(res)

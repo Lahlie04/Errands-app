@@ -1,20 +1,4 @@
 
-/* .btn {
-    color: rgb(243, 240, 239);
-    background-color: #e77f58;
-    width: 100%;
-  }
-  
-  
-  .row{
-    margin-top: 5rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-  }
-  
-  textarea{
-    background-color: #C4C4C4;
-  } */
   .container{
     max-width: 500px;
     margin: auto;
@@ -22,25 +6,27 @@
     padding: 10px;
     padding-top: 50px;
     border: solid;
-    background-color: #455A64;
+  
+    background-color: #90693180;
     border-radius: 15px;
   }
   ::placeholder {
-    color: whitesmoke;
+    /* color: whitesmoke; */
+    color: #0e1417;
     opacity: 1; /* Firefox */
   }
   input  {
-background-color: #3b4950;
+background-color: #90693180;
   }
   textarea{
-    background-color: #3b4950;
+    background-color: #90693180;
    
   }
   .comm{
-    color: white;
+    color: #90693180;
   }
 section h1{
-    color: whitesmoke;
+    color: #455A64;
     font-family: "Barlow", sans-serif;
     font-size:80px;
     margin-bottom: 30px;
@@ -53,7 +39,7 @@ section {
 }
 
 .btn{
-    background-color:#90693180; 
+    background-color:green; 
     color: white;
     border: solid;
     /* border-color: orangered; */

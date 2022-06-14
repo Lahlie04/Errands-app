@@ -364,6 +364,8 @@ const getPendingRequests=(req,res) =>{
 
 
     pool.query(queries.getPendingRequests,[client_id],(error, results)=>{
+        console.log('results:', results);
+        console.log('error:', error);
         if(!results) return res.status(400).send("invalid input")
        
         if(!results.rows.length){ 

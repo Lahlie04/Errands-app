@@ -14,11 +14,14 @@
 .card{
     background-color: #90693180;
     /* background-color: #3d231b; */
-    color: white;
+ color: wheat;
     box-shadow: 0 0 15px 0 wheat;
     border-radius: 8px;
-    border-color: wheat;
+    border-color: rgb(166, 113, 16);
     border: solid;
+}
+.team-content{
+  color: #394247;
 }
 .picture{
   width: 100%;
@@ -26,7 +29,7 @@
     object-fit: cover;
 }
 .container h1{
-    color: whitesmoke;
+    color: #394247;
     font-family: "Barlow", sans-serif;
     font-size:80px;
     margin-top: 1px;

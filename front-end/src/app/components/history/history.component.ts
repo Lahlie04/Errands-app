@@ -15,7 +15,7 @@ export class HistoryComponent implements OnInit {
   reqs=[];
   
   client_id : any;
-   today=[];
+  //  today=[];
   
 
 
