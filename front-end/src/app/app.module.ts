@@ -32,7 +32,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
        RunnerhomeComponent,
        NavbarComponent,
        JobsComponent,
-       EarningsComponent
+       EarningsComponent,
        PostingComponent,
        HistoryComponent,
        RunnerhomeComponent,

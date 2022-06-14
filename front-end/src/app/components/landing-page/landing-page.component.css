@@ -9,6 +9,9 @@
 body{
     background-color: #282e32;
   }
+  p{
+    color: #455A64;
+  }
   
   h1{
     color: #fff;
@@ -122,6 +125,7 @@ body{
     padding: 5px;
     margin-top: 25px;
     text-transform: uppercase;
+    color: #455A64;
 }
 #about{
     background-color: #E1D2BC;

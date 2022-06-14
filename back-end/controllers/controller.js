@@ -616,8 +616,9 @@ const totalRunners = (req, res) => {
 
 
 const acceptRequest = async (req,res) =>{
-    const {runner_id} = req.body;
-    const {id} = req.body;
+    // const {runner_id} = req.body;
+    // const {id} = req.body;
+    const{runner_id, id} = req.body;
     pool.query(queries.acceptRequest,[runner_id,id],(error, results) =>{
         if(error){
             console.log("error:"+error);
