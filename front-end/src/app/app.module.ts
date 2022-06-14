@@ -7,6 +7,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  NgxStarRatingModule } from 'ngx-star-rating';
 
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { PostingComponent } from './components/posting/posting.component';
@@ -17,6 +18,8 @@ import { RatingsComponent } from './components/ratings/ratings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { EarningsComponent } from './components/earnings/earnings.component';
+import { RateComponent } from './components/rate/rate.component';
+
 
 
 @NgModule({
@@ -33,14 +36,18 @@ import { EarningsComponent } from './components/earnings/earnings.component';
        RatingsComponent,
        NavbarComponent,
        JobsComponent,
-       EarningsComponent
+       EarningsComponent,
+       RateComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxStarRatingModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

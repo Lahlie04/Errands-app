@@ -12,6 +12,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { EarningsComponent } from './components/earnings/earnings.component';
+import { RateComponent } from './components/rate/rate.component';
 
 const routes: Routes = [
   {path: '', component:LandingPageComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'ratings', component:RatingsComponent},
   {path: 'nav', component:NavbarComponent},
   {path: 'Jobs', component:JobsComponent},
-  {path: 'Earn', component:EarningsComponent}
+  {path: 'Earn', component:EarningsComponent},
+  {path: 'rate', component:RateComponent},
   
 ];
 
