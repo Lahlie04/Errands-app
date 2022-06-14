@@ -87,10 +87,15 @@ acceptRequest(){
 
 
 myFunction(request:any){
+  // console.log('hello');
   // console.log(request);
-  this.reqData.id=request["id"];
-  console.log(this.reqData);
-  this.reqData.runner_id=localStorage.getItem("runnerID");
+  // this.reqData.id=request;
+  // this.reqData.runner_id=localStorage.getItem("runnerID");
+  // console.log(this.reqData);
+this.reqData.id=request["id"];
+console.log(this.reqData);
+
+this.reqData.runner_id=localStorage.getItem("runnerID")
 
   this.acceptRequest();
   
