@@ -17,6 +17,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { EarningsComponent } from './components/earnings/earnings.component';
+import { Nav2Component } from './components/nav2/nav2.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { EarningsComponent } from './components/earnings/earnings.component';
        RatingsComponent,
        NavbarComponent,
        JobsComponent,
-       EarningsComponent
+       EarningsComponent,
+       Nav2Component
   ],
   imports: [
     BrowserModule,
