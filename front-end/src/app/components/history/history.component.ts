@@ -51,6 +51,7 @@ export class HistoryComponent implements OnInit {
 
 
     pending(){
+      console.log('me')
       this.reqService.pending(this.client_id).subscribe((res=>{
         this.reqs=res;
         console.log(this.reqs)

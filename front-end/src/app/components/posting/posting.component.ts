@@ -22,10 +22,7 @@ export class PostingComponent implements OnInit {
 reqdata : any = {};
 addressData : any= {};
 
-comData:any ={
-  id:"any",
-  comment:"any"
-}
+comData:any ={}
 
   constructor(private service: AddressService) { }
 
@@ -94,8 +91,11 @@ comData:any ={
       comment:this.form.value.comment
     }
   
-    // this.comData.comment=this.form.value.comment;
-    this.comData.id=localStorage.getItem("request_id");
+    this.comData.comment=this.form.value.comment;
+    this.comData.service_id=localStorage.getItem("serviceID");
+    this.comData.client_id=localStorage.getItem("clientID");
+    console.log('zzzz', this.addressData);
+    
     this.service.getAddress(this.addressData).subscribe((res:any)=>{
       console.log(res)
       console.log(this.comData);

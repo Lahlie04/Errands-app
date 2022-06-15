@@ -1,5 +1,9 @@
 const express = require("express");
-const userRouter = require('./routes/routes');
+const addressRouter = require('./routes/address');
+const requestRouter = require('./routes/request');
+const reviewRouter = require('./routes/review');
+const servicesRouter = require('./routes/services');
+const userRouter = require('./routes/user');
 const bodyParser = require("body-parser") 
 const cors = require('cors');
 
@@ -25,6 +29,10 @@ app.get('/',(req,res)=>{
     res.send("We-run is working")
 });
 
+app.use("/api/",addressRouter);
+app.use("/api/",requestRouter);
+app.use("/api/",reviewRouter);
+app.use("/api/",servicesRouter);
 app.use("/api/",userRouter);
 
 app.listen(port,() => {
