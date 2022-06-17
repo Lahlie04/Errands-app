@@ -23,13 +23,7 @@ export class HistoryComponent implements OnInit {
   constructor(private service:HistoryService, private reqService:RequestsService) { }
 
     ngOnInit(): void {
-
-      
-      
-  
       this.client_id=localStorage.getItem("clientID");
-  
-      this.pending();
       this.getHistory();
     }
 
@@ -48,16 +42,8 @@ export class HistoryComponent implements OnInit {
 
       }))
     }
-
-
-    pending(){
-      console.log('me')
-      this.reqService.pending(this.client_id).subscribe((res=>{
-        this.reqs=res;
-        console.log(this.reqs)
-        console.log(this.client_id);
-
-      }))
+    formatDate(date: any) {
+      return new Date(date).toDateString()
     }
 
   }

@@ -16,7 +16,8 @@ module.exports.addAddress = async (req,res) => {
                     throw error;
                 }else{
                          // addUserMailer(name, surname, cell_no, email, password);
-                    res.status(201).json("Address created successfully");
+                        //  console.log(results);
+                    res.status(201).json(results.rows[0]);
                 }
             });
 }

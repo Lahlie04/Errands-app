@@ -1,134 +1,97 @@
 import { Component, OnInit } from '@angular/core';
-import { AddressService } from 'src/app/services/address.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
-
+import { RequestsService } from 'src/app/services/requests.service';
 
 @Component({
   selector: 'app-posting',
   templateUrl: './posting.component.html',
-  styleUrls: ['./posting.component.css']
+  styleUrls: ['./posting.component.css'],
 })
 export class PostingComponent implements OnInit {
-
- 
-
-  form: FormGroup = new FormGroup({})
-  clientId:any;
-  serviceId:any;
-  request_id:any;
+  form: FormGroup = new FormGroup({});
+  clientId: any;
+  serviceId: any;
+  request_id: any;
   submitted: boolean | undefined;
-reqdata : any = {};
-addressData : any= {};
+  reqdata: any = {};
+  addressData: any = {};
 
-comData:any ={}
+  comData: any = {};
 
-  constructor(private service: AddressService) { }
+  constructor(private requestService: RequestsService, private router: Router) {}
 
   ngOnInit(): void {
-
-   this.form = new FormGroup({
-      street_address: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    this.form = new FormGroup({
+      street_address: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+      ]),
       comment: new FormControl('', [Validators.required]),
       city: new FormControl('', Validators.required),
-      suburb: new FormControl('',Validators.required),
-      postal_code : new FormControl('',[Validators.required,Validators.maxLength(4),Validators.minLength(4)])
+      suburb: new FormControl('', Validators.required),
+      postal_code: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(4),
+        Validators.minLength(4),
+      ]),
     });
-    
-    this.getAddress;
-    this.clientId=localStorage.getItem("clientID");
-    this.serviceId=localStorage.getItem("serviceID"); 
-    this.getMaxId()
-    
-
-     
-    
-    
+    this.clientId = localStorage.getItem('clientID');
+    this.serviceId = localStorage.getItem('serviceID');
   }
 
-  alertWithSuccess(){
-    Swal.fire('Thank you...', 'Your post is succesfully sent😉!', 'success')
+  alertWithSuccess() {
+    Swal.fire('Thank you...', 'Your post is succesfully sent😉!', 'success');
   }
-  
 
-
-  addRequest(){
-
-    this.reqdata = {
-    client_id: this.clientId,
-    service_id : this.serviceId,
-    // comment : this.form.value.comment
+  getAddress() {
+    console.log("get address function");
     
-    }
+    this.requestService.addRequest(this.form.value).subscribe(
+      (res: any) => {
+        console.log('res here: 📍', res);
+        let weRequest = {
+          service_id: localStorage.getItem('serviceID'),
+          client_id: localStorage.getItem('clientID'),
+          address_id: res.id,
+          comment: this.form.value['comment'],
+        };
 
-    
-
-   
-    console.log(this.addressData);
-  
-    
+        console.log('new request: 👀', weRequest);
+        this.requestService.populatingRequest(weRequest).subscribe(
+          (res) => {
+            console.log('successfully add request!')
+            if (res)
+              this.alertWithSuccess();
+              this.router.navigateByUrl('/history',{replaceUrl:true});
+          },
+          (err) => {
+            console.log('something went wrong!');
+          }
+        );
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 
-   getMaxId(){
-    this.service.getMaxId(this.clientId).subscribe((res:any)=>{
-      this.request_id=res;
-      this.addressData.request_id = res;
-      localStorage.setItem("request_id", res[0].id);
-      this.request_id=localStorage.getItem("request_id");
-      console.log('The request id is :' + this.request_id);
-    })
-  }
-
-   getAddress(){
-
-    this.addressData ={
-      request_id:localStorage.getItem("request_id"),
-      street_address: this.form.value.street_address,
-      suburb:this.form.value.suburb,
-      city: this.form.value.city,
-      postal_code:this.form.value.postal_code,
-      comment:this.form.value.comment
-    }
-  
-    this.comData.comment=this.form.value.comment;
-    this.comData.service_id=localStorage.getItem("serviceID");
-    this.comData.client_id=localStorage.getItem("clientID");
-    console.log('zzzz', this.addressData);
-    
-    this.service.getAddress(this.addressData).subscribe((res:any)=>{
-      console.log(res)
-      console.log(this.comData);
-
-      this.addComment();
-      
-    })
-  }
-
- 
-  addComment(){
-    this.service.addComment(this.comData).subscribe((res:any)=>{
-      console.log('comment added');
-    })
-  }
-
-
- 
-  get f(){
+  //called on html to validate form control input
+  get f() {
     return this.form.controls;
   }
 
   onSubmit(): void {
+    console.log('onsubmit');
+    
     this.submitted = true;
+    //validation
     if (this.form.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.form.value, null));
+    console.log('Form data: ', this.form.value);
+    this.getAddress();
   }
-  myFunction(){
-    console.log(this.form.value);
-  
-  }
-
-
 }

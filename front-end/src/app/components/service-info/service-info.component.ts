@@ -75,11 +75,11 @@ addRequest(){
   service_id : this.serviceId
   }
 
-  let obj= this.service.addRequest(this.requestData);
-  obj.subscribe((res:any)=>{
-    console.log(res);
+  // let obj= this.service.addRequest(this.requestData);
+  // obj.subscribe((res:any)=>{
+    // console.log(res);
     
-  })
+  // })
 
   
   }

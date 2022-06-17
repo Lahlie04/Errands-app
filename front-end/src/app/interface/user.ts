@@ -38,13 +38,14 @@ export interface edit{
     
 }
 
+
 export interface request{
     comment: string;
     clientId: number;
     serviceId: number;
+    address_id: number;
     
 }
-
 
 
 export interface login{
