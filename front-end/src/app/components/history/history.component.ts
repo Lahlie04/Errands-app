@@ -31,6 +31,7 @@ export class HistoryComponent implements OnInit {
       
       console.log('Runner ID :' + item.runner_id);
       localStorage.setItem("runner_id", item.runner_id);
+      localStorage.setItem("request_id", item.id);
     }
     
 

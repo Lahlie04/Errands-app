@@ -1,6 +1,6 @@
 export interface Job{
 
-    errand: string,
+    service: string,
     client_name: string,
     address: string,
     status: string,

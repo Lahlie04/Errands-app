@@ -95,12 +95,14 @@ const totalRating =(req,res) =>{
 
 
 const rateServices = async (req,res) =>{
-    const {runner_id, client_id, rating, reason} = req.body;
+    const {runner_id, client_id, rating, reason, request_id} = req.body;
+    console.log("rateService:",req.body);
+    
     // const {client_id } = req.body;
     // const {rating} = req.body;
     // const {reason} = req.body;
     // const {request_id } = req.body;
-    pool.query(queries.rateServices,[runner_id,client_id,rating, reason ],(error, results) =>{
+    pool.query(queries.rateServices,[runner_id,client_id,rating, reason,request_id],(error, results) =>{
         if(error){
             console.log("error:"+error);
             res.status(404).send(error);

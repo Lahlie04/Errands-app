@@ -55,14 +55,10 @@ export class JobsComponent implements OnInit {
       this.Jobs = res;
       console.log('Hello');
       console.log(res);
-
       
     }));
-
-   
    
   };
-
 
   updateJob(){
     this.service.updateStatus(this.errand).subscribe((res=>{

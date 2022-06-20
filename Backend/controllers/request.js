@@ -5,17 +5,17 @@ const Pool = require('pg').Pool;
 
 
 
-// module.exports.getRequestByClientId = (req, res) => {
-//     const client_id = req.params.id
-//     pool.query(queries.getRequestByClientId,[client_id],(error, results) => {
-//         if(error){
-//             console.log("error:"+error);
-//             res.status(404).send(error);
-//             // throw error;
-//         }
-//         res.status(200).json(results.rows);
-//     })
-// }
+module.exports.getRequestByClientId = (req, res) => {
+    const client_id = req.params.id
+    pool.query(queries.getRequestByClientId,[client_id],(error, results) => {
+        if(error){
+            console.log("error:"+error);
+            res.status(404).send(error);
+            // throw error;
+        }
+        res.status(200).json(results.rows);
+    })
+}
 
 module.exports.getRequest = (req, res) => {
 // const address_id = req.params.id
@@ -32,11 +32,14 @@ module.exports.getRequest = (req, res) => {
 
 module.exports.getRequestByRunnerId = (req, res) => {
     const runner_id = req.params.id;
-    const address_id = req.params.id
-console.log("both",req.params.id)
-    pool.query(queries.getRequestByRunnerId,[runner_id, address_id],(error, results)=>{
-        if(!results) return res.status(400).send("invalid input")
-       
+    
+//     console.log("address",req.body)
+// console.log("both",req.params.id)
+    pool.query(queries.getRequestByRunnerId,[runner_id],(error, results)=>{
+        if(!results) { 
+            console.log(error);
+            return res.status(400).send("invalid input")
+        }
         if(!results.rows.length){ 
             res.status(404).send('request not found')
             console.log(results.rows);
@@ -68,6 +71,7 @@ module.exports.acceptRequest = async (req,res) =>{
 module.exports.updateStatus = async (req,res) =>{
     const id = req.params.id;
     const {status } = req.body;
+    console.log("id",req.params.id)
     pool.query(queries.updateStatus,[status,id],(error, results) =>{
         if(this.error){
             console.log("error:"+error);

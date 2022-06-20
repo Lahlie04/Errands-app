@@ -16,7 +16,7 @@ export class RatingsComponent implements OnInit {
     this.runner_id=localStorage.getItem("runnerID");
     this.ratingsService.getRatings(this.runner_id).subscribe((res) => {
       console.log(res);
-      this.ratings = [...res];
+      this.ratings = res;
       console.log(this.ratings);
     })
 

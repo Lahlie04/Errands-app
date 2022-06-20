@@ -45,11 +45,12 @@
             
               <p class="card-text"><small class="text-muted">Date: {{formatDate(item.req_date)}}</small></p>
               <!-- <p class="card-text">Service Provider: <small class="text-muted">{{this.item.runner_name}}</small></p> -->
-              <div *ngIf="item.status == 'completed'" class="col-md-12 text-right">
-                <button type="button"  class="btn btn-warning ml-2" (click)="getId(item)" [routerLink]="['/rate']">Rate</button>
-            </div>
+             
             <p class="card-text">Instruction: <small class="text-muted">{{item.comment}}</small></p>
             <p class="card-text">Status: <small class="text-muted">{{item.status}}</small></p>
+            <div *ngIf="item.status == 'Completed'" class="col-md-12 text-right">
+              <button type="button"  class="btn btn-warning ml-2" (click)="getId(item)" [routerLink]="['/rate']">Rate</button>
+          </div>
      
             </div>
           </div>
